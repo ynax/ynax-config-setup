@@ -1,0 +1,13 @@
+# Ignore all files excpet named folders
+## https://stackoverflow.com/questions/23301107/how-can-i-include-only-specific-folders-in-git-using-gitignore
+
+# Ignore everything
+/*
+
+# Files to not ignore 
+!/.gitignore
+!/README.md
+
+# Directories not to ignore 
+!/nvim/
+!/kitty/
