@@ -1,0 +1,3 @@
+require("ynx")
+print("Hello")
+
