@@ -24,6 +24,9 @@ return require('packer').startup(function(use)
 
 	-- Tresitter, im good 
 	-- use'nvim-tree/nvim-tree.lua'
+
+	-- Terminals in nvim
+	use {"akinsho/toggleterm.nvim", tag = '*'}
 	
 	-- Lualine, window information 
 	-- https://github.com/nvim-lualine/lualine.nvim
