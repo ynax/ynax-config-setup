@@ -67,6 +67,9 @@ return require('packer').startup(function(use)
 		requires = { 'nvim-treesitter/nvim-treesitter' }
 	}
 
+	-- Hide color column when not available
+	use "m4xshen/smartcolumn.nvim"
+
 	-- COLOR THEMES / COLOR SCALES 
 	-- A very nice theme! 
 	use'folke/tokyonight.nvim'
