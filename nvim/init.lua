@@ -1,3 +1,11 @@
-require("ynx")
-print("Hello")
+
+ --require("ynx")
+
+-- Settings 
+require'settings'
+
+-- Key mappings
+require'keymap'
+-- Package configuration 
+
 
