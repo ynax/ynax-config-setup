@@ -3,7 +3,18 @@ vim.cmd [[packadd packer.nim]]
 return require('packer').startup(function(use)
 	--packer  can manage itself 
 	use 'wbthomason/packer.nvim'
-	
+
+	-- Homescreen/Startup screen
+	-- Either alpha-nvim or 
+	-- dashboard-nvim
+	use {
+		'goolord/alpha-nvim',
+		config = function ()
+			require'alpha'.setup(require'alpha.themes.dashboard'.config)
+		end
+	}
+
+
 	-- Telescope for finding stuff 
 	use'nvim-telescope/telescope.nvim'
 
