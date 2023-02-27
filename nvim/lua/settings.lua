@@ -22,6 +22,7 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8 -- Sets how many rows below/above active when scrolling 
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
+vim.opt.list = false -- Needed to make indent_blankline awesome! 
 
 vim.opt.colorcolumn = "80" -- Line at X:s column
 

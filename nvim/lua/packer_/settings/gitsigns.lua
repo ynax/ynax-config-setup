@@ -1,4 +1,6 @@
 
+
+-- Git show which row(s) has changed/modified/new/deleted...
 require('gitsigns').setup {
 	signs = {
 		add          = { text = '│' },

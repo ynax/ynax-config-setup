@@ -1,3 +1,7 @@
+-- Don't use this file... for now...
+
+
+
 
 -- Alpha for NVIM: https://github.com/goolord/alpha-nvim
 -- Inspiration taken from showcases shown here:
@@ -50,4 +54,4 @@ alpha.setup(dashboard.opts)
 -- Disable folding on alpha buffer
 vim.cmd([[
     autocmd FileType alpha setlocal nofoldenable
-]])
+]

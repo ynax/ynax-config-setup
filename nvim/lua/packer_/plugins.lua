@@ -3,7 +3,6 @@
 return require('packer').startup(function(use)
 	--packer  can manage itself 
 	use 'wbthomason/packer.nvim'
-
 	-- Homescreen/Startup screen
 	-- Either alpha-nvim or 
 	-- dashboard-nvim
@@ -13,7 +12,6 @@ return require('packer').startup(function(use)
 			require'alpha'.setup(require'alpha.themes.dashboard'.config)
 		end
 	}
-
 
 	-- Telescope for finding stuff 
 	use'nvim-telescope/telescope.nvim'
@@ -65,7 +63,17 @@ return require('packer').startup(function(use)
 	use'ThePrimeagen/Harpoon'
 	
 	-- Move anywhere in 4 strokes! 
-	use('easymotion/vim-easymotion')
+	-- Easymotion-vim is entierly written in vimscript, and I don't like 
+	-- that...
+	-- Instead we use [Hop](https://github.com/phaazon/hop.nvim)
+	use {
+		'phaazon/hop.nvim',
+		branch = 'v2', -- optional but strongly recommended
+--		config = function()
+			-- you can configure Hop the way you like here; see :h hop-config
+--			require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+--		end
+	}
 
 	-- Git pluggin for vim. Or, Vim plugnin for Git ? 
 	use'tpope/vim-fugitive'
