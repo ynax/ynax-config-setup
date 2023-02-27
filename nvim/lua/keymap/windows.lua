@@ -30,7 +30,8 @@ vim.keymap.set({"n","v"},"<Tab>wt",[[<Cmd>wincmd t<CR>]])
 vim.keymap.set({"n","v"},"<Tab>wb",[[<Cmd>wincmd b<CR>]])
 -- move cursor to last accessed window 
 vim.keymap.set({"n","v"},"<Tab>wp",[[<Cmd>wincmd p<CR>]])
-
+-- Move cursor to next (?) window ? 
+vim.keymap.set({"n","v"},"<Tab>ww",[[<Cmd>wincmd w<CR>]])
 
 -- Remap MOVE WINDOW: https://neovim.io/doc/user/windows.html#window-moving
 -- Move window downards/right
