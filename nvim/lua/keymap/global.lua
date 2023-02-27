@@ -62,9 +62,9 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 
 -- Quick and dirty way of :source a file
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+--vim.keymap.set("n", "<leader>", function()
+--    vim.cmd("so")
+--end)
 
 
 
