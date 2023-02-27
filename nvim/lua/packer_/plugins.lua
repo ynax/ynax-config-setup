@@ -1,4 +1,4 @@
-vim.cmd [[packadd packer.nim]]
+
 
 return require('packer').startup(function(use)
 	--packer  can manage itself 
