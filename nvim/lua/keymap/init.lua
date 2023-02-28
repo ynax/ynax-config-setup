@@ -1,4 +1,5 @@
 
+require'keymap.barbar'
 --require'keymap.completions'
 require'keymap.fugitive'
 require'keymap.global'

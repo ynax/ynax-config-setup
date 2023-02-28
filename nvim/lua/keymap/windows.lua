@@ -7,8 +7,7 @@ vim.keymap.set({"n","v"},"<tab>s",[[<Cmd>wincmd s<CR>]])
 -- Split current window in two, vertically. The result is two viewports on the same file
 vim.keymap.set({"n","v"},"<tab>v",[[<Cmd>wincmd v<CR>]])
 
--- Cose the current window 
-vim.keymap.set({"n","v"},"<tab>c",[[<Cmd>wincmd c<CR>]])
+
 -- Cose the current window 
 vim.keymap.set({"n","v"},"<tab>q",[[<Cmd>wincmd q<CR>]])
 -- Make the current window the only window left

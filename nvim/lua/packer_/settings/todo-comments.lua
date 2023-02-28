@@ -1,5 +1,3 @@
--- TODO: Add icons..
-
 -- TODO: This is a todo comment
 -- this is not a todo comment
 

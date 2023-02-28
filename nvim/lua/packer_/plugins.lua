@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
 		'folke/trouble.nvim', 
 		config = function()			
 			require('trouble').setup {
-				icons = false
+				icons = true,
 				-- your configuration comes here
 				-- or leave it empty to use default settings
 				-- refer to the configuration selection below
@@ -30,6 +30,9 @@ return require('packer').startup(function(use)
 		}
 	-- Todos
 	use'folke/todo-comments.nvim'
+
+	-- Barbar, tabs/bars for NVIM
+	use {'romgrk/barbar.nvim'}
 
 	-- Tresitter, im good 
 	-- use'nvim-tree/nvim-tree.lua'
@@ -49,11 +52,23 @@ return require('packer').startup(function(use)
 	-- Indentation: Show indentation lines 
 	use'lukas-reineke/indent-blankline.nvim'
 
+	-- Markdown preview
+	-- install without yarn or npm
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
 	-- Treesitter! Better syntax highlighting! 
 	use('nvim-treesitter/nvim-treesitter', {run=':TSUpdate'})
 	-- Treesitter playground, very nice to see groupings for hightlighting
 	-- Use when actually needed 
 	-- use('nvim-treesitter/playground')
+
+
+	-- treesitter context
+	use 'nvim-treesitter/nvim-treesitter-context'
 	
 	-- Undotree, like a git but for single files and always active. Can go 
 	-- back within a session to see edits and forks.. Very nice if used
@@ -89,11 +104,22 @@ return require('packer').startup(function(use)
 	-- Hide color column when not available
 	use "m4xshen/smartcolumn.nvim"
 
+	-- See colors directly in NVIM! 
+	use'norcalli/nvim-colorizer.lua'
+
 	-- COLOR THEMES / COLOR SCALES 
 	-- A very nice theme! 
 	use'folke/tokyonight.nvim'
 	-- Looks like something from Atom.. 
 	use'arcticicestudio/nord-vim'
+
+	-- Rust crates 
+	use {
+		'saecki/crates.nvim',
+	}
+
+	-- Faster NVIM startup times.. ? 
+	use("nathom/filetype.nvim")
 
 	-- LSP Setup
 	-- Following this setup: https://sharksforarms.dev/posts/neovim-rust/

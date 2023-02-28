@@ -5,7 +5,8 @@
 -- Set leader key to space 
 vim.g.mapleader = " "
 -- Set how we exit a file and return to dir view..
-vim.keymap.set("n","<leader>pv",vim.cmd.Ex)
+-- vim.keymap.set("n","<leader>pv",vim.cmd.Ex) -- Old..
+vim.keymap.set("n","--",vim.cmd.Ex)
 
 -- Visual mode move rows/marked up and down..
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -47,8 +48,11 @@ vim.keymap.set("i","<C-S-v>", [["+<C-v>]])
 
 vim.keymap.set("i", "jk", "<Esc>")
 
--- ?? 
+
+-- First remove the use of some standard keymappings..
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<Tab>cc", "<nop>")
+vim.keymap.set("n", "<Tab>co", "<nop>")
 --vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>") -- ?
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
