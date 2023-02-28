@@ -1,7 +1,7 @@
 -- Include all files that we setup
 
 
---require'packer_.settings.alpha'
+require'packer_.settings.alpha'
 --require'packer_.settings.alpha'
 require'packer_.settings.fugitive'
 require'packer_.settings.gitsigns'
