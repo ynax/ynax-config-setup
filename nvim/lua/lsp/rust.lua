@@ -34,7 +34,7 @@ local opts = {
 			["rust-analyzer"] = {
 				-- enable clippy on save
 				checkOnSave = {
-					command = "clippy",
+					command = "check",
 				},
 				hoverActions = {
 					references = true,
