@@ -31,11 +31,8 @@ return require('packer').startup(function(use)
 	-- Todos
 	use'folke/todo-comments.nvim'
 
-	-- Barbar, tabs/bars for NVIM
-	use {'romgrk/barbar.nvim'}
-
 	-- Tresitter, im good 
-	-- use'nvim-tree/nvim-tree.lua'
+	use'nvim-tree/nvim-tree.lua'
 
 	-- Terminals in nvim
 	use {"akinsho/toggleterm.nvim", tag = '*'}
