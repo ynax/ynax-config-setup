@@ -6,12 +6,12 @@ return require('packer').startup(function(use)
 	-- Homescreen/Startup screen
 	-- Either alpha-nvim or 
 	-- dashboard-nvim
-	use {
-		'goolord/alpha-nvim',
-		config = function ()
-			require'alpha'.setup(require'alpha.themes.dashboard'.config)
-		end
-	}
+--	--use {
+	--	'goolord/alpha-nvim',
+	--	config = function ()
+	--		require'alpha'.setup(require'alpha.themes.dashboard'.config)
+	--	end
+	--}
 
 	-- Telescope for finding stuff 
 	use'nvim-telescope/telescope.nvim'
@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
 	use'folke/todo-comments.nvim'
 
 	-- Tresitter, im good 
-	use'nvim-tree/nvim-tree.lua'
+--	use'nvim-tree/nvim-tree.lua'
 
 	-- Terminals in nvim
 	use {"akinsho/toggleterm.nvim", tag = '*'}
@@ -65,14 +65,14 @@ return require('packer').startup(function(use)
 
 
 	-- treesitter context
-	use 'nvim-treesitter/nvim-treesitter-context'
+--	use 'nvim-treesitter/nvim-treesitter-context'
 	
 	-- Undotree, like a git but for single files and always active. Can go 
 	-- back within a session to see edits and forks.. Very nice if used
 	use'mbbill/undotree'
 
 	-- Harpoon, to quickly move between files! 
-	use'ThePrimeagen/Harpoon'
+--	use'ThePrimeagen/Harpoon'
 	
 	-- Move anywhere in 4 strokes! 
 	-- Easymotion-vim is entierly written in vimscript, and I don't like 
@@ -111,9 +111,7 @@ return require('packer').startup(function(use)
 	use'arcticicestudio/nord-vim'
 
 	-- Rust crates 
-	use {
-		'saecki/crates.nvim',
-	}
+--	use {'saecki/crates.nvim',}
 
 	-- Faster NVIM startup times.. ? 
 	use("nathom/filetype.nvim")
