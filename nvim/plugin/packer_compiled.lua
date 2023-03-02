@@ -124,16 +124,6 @@ _G.packer_plugins = {
     path = "/home/martinj/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/martinj/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
-    url = "https://github.com/iamcco/markdown-preview.nvim"
-  },
-  ["nord-vim"] = {
-    loaded = true,
-    path = "/home/martinj/.local/share/nvim/site/pack/packer/start/nord-vim",
-    url = "https://github.com/arcticicestudio/nord-vim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/martinj/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -173,11 +163,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/martinj/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
-  },
-  ["smartcolumn.nvim"] = {
-    loaded = true,
-    path = "/home/martinj/.local/share/nvim/site/pack/packer/start/smartcolumn.nvim",
-    url = "https://github.com/m4xshen/smartcolumn.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

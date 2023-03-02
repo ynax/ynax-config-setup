@@ -51,11 +51,11 @@ return require('packer').startup(function(use)
 
 	-- Markdown preview
 	-- install without yarn or npm
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function() vim.fn["mkdp#util#install"]() end,
-	})
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+--	use({
+--		"iamcco/markdown-preview.nvim",
+--		run = function() vim.fn["mkdp#util#install"]() end,
+--	})
+--	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 	-- Treesitter! Better syntax highlighting! 
 	use('nvim-treesitter/nvim-treesitter', {run=':TSUpdate'})
@@ -99,7 +99,7 @@ return require('packer').startup(function(use)
 	}
 
 	-- Hide color column when not available
-	use "m4xshen/smartcolumn.nvim"
+--	use "m4xshen/smartcolumn.nvim"
 
 	-- See colors directly in NVIM! 
 	use'norcalli/nvim-colorizer.lua'
@@ -108,7 +108,7 @@ return require('packer').startup(function(use)
 	-- A very nice theme! 
 	use'folke/tokyonight.nvim'
 	-- Looks like something from Atom.. 
-	use'arcticicestudio/nord-vim'
+--	use'arcticicestudio/nord-vim'
 
 	-- Rust crates 
 --	use {'saecki/crates.nvim',}
