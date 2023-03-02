@@ -114,7 +114,7 @@ return require('packer').startup(function(use)
 --	use {'saecki/crates.nvim',}
 
 	-- Faster NVIM startup times.. ? 
-	use("nathom/filetype.nvim")
+--	use("nathom/filetype.nvim")
 
 	-- LSP Setup
 	-- Following this setup: https://sharksforarms.dev/posts/neovim-rust/
