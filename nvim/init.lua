@@ -4,12 +4,13 @@
 -- Settings 
 require'settings'
 
+-- Package configuration with packer
+require'packer_.init'
+
 -- Key mappings
 require'keymap'
 -- Package configuration 
 
--- Package configuration with packer
-require'packer_.init'
 
 -- Set theme/color schem
 require'theme.init'

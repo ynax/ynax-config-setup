@@ -2,7 +2,7 @@
 --require'keymap.completions'
 require'keymap.fugitive'
 require'keymap.global'
-require'keymap.harpoon'
+--require'keymap.harpoon'
 --require'keymap.lsp'
 require'keymap.hop'
 --require'keymap.nvim-tree' -- see lua/packer_/settings/nvim-tree.lua
