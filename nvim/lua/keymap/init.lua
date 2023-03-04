@@ -1,5 +1,5 @@
 
---require'keymap.completions'
+require'keymap.completions'
 require'keymap.fugitive'
 require'keymap.global'
 --require'keymap.harpoon'
