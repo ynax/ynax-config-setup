@@ -90,7 +90,21 @@ dashboard.section.header.val = {
     ",                                                  ",
 }
 dashboard.section.header.val = logo_2
+--dashboard.section.header.val = logo_1
 
+-- How to set color.
+-- This is done by choosing a/the highlighting groupj
+--Most elements accept `opts.hl = "hl_group"` or an array of
+--`{'hl_group', start_col, end_col}`
+
+-- https://www.reddit.com/r/neovim/comments/sihuq7/psa_now_you_can_set_global_highlight_groups_ie/
+vim.api.nvim_set_hl(0, 'BrandLogo', { fg = "Red"})
+local function pick_color()
+                local colors = {"String", "Identifier", "Keyword", "Number"}
+                return "BrandLogo"--math.random(#colors)		
+                --return math.random(#colors)		
+            end
+dashboard.section.header.opts.hl = pick_color()
 -- Set menu
 dashboard.section.buttons.val = {
     dashboard.button( "e", "> New file" , ":ene <BAR> startinsert <CR>"),

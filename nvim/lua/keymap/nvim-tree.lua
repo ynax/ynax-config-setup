@@ -3,8 +3,13 @@ local api = require "nvim-tree.api"
 local M = {}
 
 
-vim.keymap.set({'n','v'},'<Tab>',api.tree.open, {
+vim.keymap.set({'n','v'},'--',api.tree.open, {
 	desc = 'nvim-tree: Toggle Tree',
+	noremap =true,	
+})
+
+vim.keymap.set({'n','v'},'<Tab>i',api.tree.close, {
+	desc = 'nvim-tree: Close Tree',
 	noremap =true,	
 })
 
@@ -29,7 +34,8 @@ M.on_attach = function(bufnr)
 	vim.keymap.set('n', 'x', api.node.open.horizontal,              opts('Open: Horizontal Split'))
 	-- Close folder
 	vim.keymap.set('n', '<BS>',  api.node.navigate.parent_close,        opts('Close Directory'))
---	vim.keymap.set('n', '<Tab>', api.node.open.preview,                 opts('Open Preview'))
+	-- Preview, would be nice if this was in a float.. 
+	vim.keymap.set('n', 'p', api.node.open.preview,                 opts('Open Preview'))
 	-- Move to next sibling file/folder
 	vim.keymap.set('n', '>',     api.node.navigate.sibling.next,        opts('Next Sibling'))
 	-- Move to previous sibling file/folder
@@ -84,6 +90,7 @@ M.on_attach = function(bufnr)
 	vim.keymap.set('n', 'Y',     api.fs.copy.relative_path,             opts('Copy Relative Path'))
 	-- Open folder
 	vim.keymap.set('n', '<CR>',  api.node.open.edit,                    opts('Open'))
+
 
 	-- Move to changed files
 	-- Git move to next 

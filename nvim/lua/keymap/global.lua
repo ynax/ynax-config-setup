@@ -5,8 +5,8 @@
 -- Set leader key to space 
 vim.g.mapleader = " "
 -- Set how we exit a file and return to dir view..
--- vim.keymap.set("n","<leader>pv",vim.cmd.Ex) -- Old..
-vim.keymap.set("n","--",vim.cmd.Ex)
+vim.keymap.set("n","<leader>pv",vim.cmd.Ex) -- Old..
+-- vim.keymap.set("n","--",vim.cmd.Ex)
 
 -- Visual mode move rows/marked up and down..
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -32,16 +32,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]]) -- ???
 -- Delete characters befoer and after  
 vim.keymap.set({"n","v"},"<leader>d", [["_d]])
 -- Same of pasting 
-vim.keymap.set({"n","v"},"<leader>p", [["+p]])
-
--- Set exit of insert mode
-vim.keymap.set("n", "<leader>Y", [["+Y]]) -- ??? 
--- "Next greatest remapping ever : asbjornHaland" - The Primeagen
--- Copy/Yank to clippborad instead of internal in vim
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]]) -- 
-vim.keymap.set("n", "<leader>Y", [["+Y]]) -- ??? 
--- Delete characters befoer and after  
-vim.keymap.set({"n","v"},"<leader>d", [["_d]])
+vim.keymap.set({"n"},"<leader>p", [["+p]])
 
 -- Do same for insert mode 
 vim.keymap.set("i","<C-S-v>", [["+<C-v>]])
@@ -57,18 +48,12 @@ vim.keymap.set("n", "<Tab>co", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 
-
 -- Quick fix list.. (what is that??)
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-
--- Quick and dirty way of :source a file
---vim.keymap.set("n", "<leader>", function()
---    vim.cmd("so")
---end)
 
 
 

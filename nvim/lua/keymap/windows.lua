@@ -48,5 +48,10 @@ vim.keymap.set({"n","v"},"<Tab>L",[[<Cmd>wincmd L<CR>]], { remap = true})
 -- Move current window to a NEW tab.
 vim.keymap.set({"n","v"},"<Tab>T",[[<Cmd>wincmd T<CR>]], { remap = true})
 
+-- Resize current window 
+vim.keymap.set("n","<C-Right>",":vertical resize +5<CR>"  , {remap = true, silent = true})
+vim.keymap.set("n","<C-Left>",":vertical resize -5<CR>"  , {remap = true, silent = true})
 
+vim.keymap.set("n","<C-Up>",":horizontal resize +5<CR>"  , {remap = true, silent = true})
+vim.keymap.set("n","<C-Down>",":horizontal resize -5<CR>"  , {remap = true, silent = true})
 

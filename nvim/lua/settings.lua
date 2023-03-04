@@ -1,6 +1,5 @@
 
 -- General NVIM settings
-print("hello from settings")
 
 -- https://vi.stackexchange.com/questions/9366/set-formatoptions-in-vimrc-is-being-ignored
 -- See ":h fo-table" for help
