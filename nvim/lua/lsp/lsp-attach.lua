@@ -6,6 +6,8 @@ local map = vim.keymap.set
 local opts = {noremap = true, silent = true, buffer = 0}
 
 M.on_attach = function()
+	-- Only want column when we are using a file!
+	require('smartcolumn').setup()
 	-- I see the potential to go directly to the type definition, 
 	-- For a variable of type `type` go to definition
 	vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
@@ -26,10 +28,10 @@ M.on_attach = function()
 	vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts) -- ?? 
 
 	-- Loop through the diagnostics 
-	vim.keymap.set("n", "7", vim.diagnostic.goto_prev, opts)
-	vim.keymap.set("n", "8", vim.diagnostic.goto_next, opts)
+	vim.keymap.set("n", "<A-1>", vim.diagnostic.goto_prev, opts)
+	vim.keymap.set("n", "<A-2>", vim.diagnostic.goto_next, opts)
 	-- These are all very nice!! 
-	vim.keymap.set("n", "9", vim.lsp.buf.code_action, opts)
+	vim.keymap.set("n", "<A-3>", vim.lsp.buf.code_action, opts)
 
 	vim.keymap.set("n", "<leader>rr", vim.lsp.buf.references, opts)
 	-- QUESTION: Rename where? 

@@ -3,6 +3,22 @@
 
 local on_attach = function(client)
 	require("lsp.lsp-attach").on_attach()
+	local rt = require('rust-tools')
+	-- Dunno if I like this....
+--	vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+
+	-- Runnables 
+	vim.keymap.set("n", "<C-i>", rt.runnables.runnables, {buffer = bufnr})
+--	vim.keymap.set("n","Å", rt.cached_commands.execute_last_runnable, {buffer = bufnr})
+
+	-- Move item up/down
+	vim.keymap.set("n", "<A-Up>", function(_,bufnr)
+		rt.move_item.move_item("Up")
+	end, {buffer = bufnr})
+	vim.keymap.set("n", "<A-Down>", function(_,bufnr)
+		rt.move_item.move_item("Down")
+	end, {buffer = bufnr})
+
 end
 
 -- SETUP LSP for rust with `rust-tools`
@@ -11,15 +27,30 @@ end
 -- See https://github.com/simrat39/rust-tools.nvim#configuration
 local opts = {
 	tools = {
+		executor = require("rust-tools/executors").termopen,
 		runnables = {
 			use_telescope = true,
 		},
+		-- Fix this so "H" and "W" doesn't show
 		inlay_hints = {
 			auto = true,
-			show_parameter_hints = false,
-			parameter_hints_prefix = "",
-			other_hints_prefix = "",
+			show_parameter_hints = true,
+			parameter_hints_prefix = "<- ",
+			other_hints_prefix = "=> ",
+			-- whether to align to the extreme right or not
+			right_align = false,
+			-- The color of the hints
+			-- TODO: Change color 
+			highlight = "Comment",
+
 		},
+		-- Not working, using dressing instead.
+--		hover_actions = {
+			-- the border that is used for the hover window
+			-- see vim.api.nvim_open_win()
+--			border = "shadow",
+--			auto_focus = true,
+--		}
 	},
 
 	-- all the opts to send to nvim-lspconfig

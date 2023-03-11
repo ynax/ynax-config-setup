@@ -19,6 +19,7 @@ require'nvim-treesitter.configs'.setup {
 
 	highlight = {
 		enable = true,
+--		disable = { "c", "rust" },
 
 
 		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
@@ -29,3 +30,5 @@ require'nvim-treesitter.configs'.setup {
 	},
 }
 
+-- vim.api.nvim_set_hl(0, "@function", { link = "Tag" })
+ -- rustCommentBlock, rustCommentLineDoc, rustCommentBlockDoc, 

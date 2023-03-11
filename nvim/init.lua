@@ -17,3 +17,6 @@ require'theme.init'
 
 -- Set LSP 
 require'lsp.init'
+--vim.api.nvim_set_hl(0, "@function.rust", { link = "Comment" })
+-- vim.api.nvim_set_hl(0, "Comment", { link = "Function" })
+--vim.api.nvim_set_hl(0, 'Cursor', { reverse = true })

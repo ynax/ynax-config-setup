@@ -11,6 +11,7 @@ require'keymap.hop'
 require'keymap.tabs'
 require'keymap.telescope'
 require'keymap.toggleterm'
+require'keymap.rust-tools'
 require'keymap.trouble'
 require'keymap.windows'
 

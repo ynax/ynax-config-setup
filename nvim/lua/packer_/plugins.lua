@@ -31,6 +31,9 @@ return require('packer').startup(function(use)
 	-- Todos
 	use'folke/todo-comments.nvim'
 
+	-- Floating window support for e.g LSP RustRunnables
+	use 'stevearc/dressing.nvim'
+
 	-- Tresitter, im good 
 	use'nvim-tree/nvim-tree.lua'
 
