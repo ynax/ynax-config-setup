@@ -21,6 +21,7 @@ require'packer_.settings.telescope'
 require'packer_.settings.todo-comments'
 require'packer_.settings.toggleterm'
 require'packer_.settings.treesitter' --here
+-- Don't like this when it hasn't transparent background!
 require'packer_.settings.treesitter-context'
 require'packer_.settings.trouble'
 require'packer_.settings.undo'

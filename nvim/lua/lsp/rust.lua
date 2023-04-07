@@ -8,7 +8,7 @@ local on_attach = function(client)
 --	vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
 
 	-- Runnables 
-	vim.keymap.set("n", "<C-i>", rt.runnables.runnables, {buffer = bufnr})
+	vim.keymap.set("n", "å", rt.runnables.runnables, {buffer = bufnr})
 --	vim.keymap.set("n","Å", rt.cached_commands.execute_last_runnable, {buffer = bufnr})
 
 	-- Move item up/down
@@ -27,10 +27,9 @@ end
 -- See https://github.com/simrat39/rust-tools.nvim#configuration
 local opts = {
 	tools = {
-		executor = require("rust-tools/executors").termopen,
-		runnables = {
-			use_telescope = true,
-		},
+		-- Rust runnables in a floating window is dont through "Dressing"
+		-- https://github.com/stevearc/dressing.nvim
+	 	executor = require("rust-tools/executors").termopen,
 		-- Fix this so "H" and "W" doesn't show
 		inlay_hints = {
 			auto = true,
@@ -40,8 +39,7 @@ local opts = {
 			-- whether to align to the extreme right or not
 			right_align = false,
 			-- The color of the hints
-			-- TODO: Change color 
-			highlight = "Comment",
+			highlight = "Hint",
 
 		},
 		-- Not working, using dressing instead.
@@ -62,10 +60,19 @@ local opts = {
 		settings = {
 			-- to enable rust-analyzer settings visit:
 			-- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+			-- Settings: https://rust-analyzer.github.io/manual.html
 			["rust-analyzer"] = {
 				-- enable clippy on save
-				checkOnSave = {
+				-- Enable checking in all features: 
+				-- https://github.com/rust-lang/rust-analyzer/issues/779
+				cargo = {
+					allFeatures = true,
+				},
+				check = {
 					command = "clippy",
+
+					--command = "clippy",
+					extraArgs = {"--all","--","-W", "clippy:all"},
 				},
 				hoverActions = {
 					references = true,

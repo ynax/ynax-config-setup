@@ -21,6 +21,8 @@ to look up. hah!
 
 - Leader `<space>`
 - Exit file to "files" (not Tree..)
+- Start of file `gg`
+- End of file  `G`
 - (V) Move marked rows up and down
 	- Up `K`
 	- Down `J`
@@ -31,6 +33,17 @@ to look up. hah!
 - Paste from clippboard  `<leader>p`
 - Exit insert mode `jk`
 - Remove keymapping from the following `Q`, `Tab+c+c`, `Tab+c+o`, `<leader>f`
+- Delete whitespace to first character [`dw`](https://vi.stackexchange.com/questions/12680/how-to-delete-all-white-spaces-until-first-character)
+- [Delete](https://askubuntu.com/questions/64833/vi-shortcut-to-delete-until-the-next-x-character) to character X
+	- Delete forward up to: `dtX`
+	- Delete forward through: `dfX`
+	- Delete backward up to: `dTX`
+	- Delete backward through: `dFX`
+- Visual-block mode
+	- Multiple cursors on lines `<C-v>`
+- TODO: Bind `<C-^>`to something else! (go back to last file)
+- TODO: Only have paste from clippboard on `<leader+p>`. Or, figure out a better
+keybinding! for paste...
 
 
 ## Window
@@ -83,11 +96,12 @@ Works only on files with an active LSP.
 	- Open code actions `A+3`
 - See all references `<leader>-r-r`
 - Rename variable/function in workspace `<leader>-r-n`
+- See documentation `K`
 
 ### Rust 
 
-- Runnables `<C-i>`
 - Move items up/down `<A-Up>`/`<A-Down>`
+- Runnables `<S+å>`
   
 ## Alpha
 
@@ -160,6 +174,15 @@ Description from <https://github.com/kylechui/nvim-surround>
 
 The three "core" operations of add/delete/change can be done with the keymaps ys{motion}{char}, ds{char}, and cs{target}{replacement}, respectively. For the following examples, * will denote the cursor position:
 
+- Remove surrounding `dsX`
+- Surround a word `ysiwX`
+- Change surroundings from X to Y `csXY`
+- Wrap the entire line `yssX`
+- In visual mode, first make selection, then `SX` to surround.
+
+
+lets try out visual mode
+
 
 ## Tabs 
 
@@ -189,3 +212,6 @@ Unknown mappngs `C+` + `h/j/k/l/w`
 ## Trouble 
 
 - Open trouble `<leader>+x+q` 
+
+
+

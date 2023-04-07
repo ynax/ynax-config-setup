@@ -1,5 +1,4 @@
 -- We can specify default settings
-
 -- Tokyo is a bit to damp for my liking
 -- if only the colours would be stronger then we are A OK.
 require("tokyonight").setup({
@@ -32,7 +31,8 @@ require("tokyonight").setup({
 	---@param colors ColorScheme
 	on_colors = function(colors) 
 		--colors.hint = "#42613b"
---		colors.bg_statusline = "red"
+		--		colors.bg_statusline = "red"
+		--		colors.comment = "#42613b"
 	end,
 
 	--- You can override specific highlights to use other groups or a hex color
@@ -42,6 +42,15 @@ require("tokyonight").setup({
 	on_highlights = function(hl, colors) 
 		-- Set color for all line numbers 
 		hl.LineNr.fg = "#42613b"
-		hl.Comment.fg = "#ac9db0"
+		--		hl.Comment.fg = ""
+		hl.Comment.fg = "#ff7dcf"
+		hl.TreesitterContext.link = "Background"
+		hl.TreesitterContextBottom = {
+			underline = true
+		}
+		hl.Hint = {fg="White"}
+		
 	end,
+
 })
+

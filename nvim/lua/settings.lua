@@ -23,7 +23,8 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 vim.opt.list = false -- Needed to make indent_blankline awesome! 
 
-vim.opt.colorcolumn = "80" -- Line at X:s column
+-- Rust's standard width is 100.
+vim.opt.colorcolumn = "100" -- Line at X:s column
 
 -- Specify split directions
 vim.o.splitbelow = true
