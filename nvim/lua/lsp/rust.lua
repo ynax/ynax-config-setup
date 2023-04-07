@@ -1,4 +1,4 @@
--- Rust LSP module using `rust-tools`
+
 -- Inspiration form:https://sharksforarms.dev/posts/neovim-rust/
 
 local on_attach = function(client)
@@ -61,18 +61,22 @@ local opts = {
 			-- to enable rust-analyzer settings visit:
 			-- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
 			-- Settings: https://rust-analyzer.github.io/manual.html
+			-- https://github.com/simrat39/rust-tools.nvim/wiki/Server-Configuration-Schema
 			["rust-analyzer"] = {
 				-- enable clippy on save
 				-- Enable checking in all features: 
 				-- https://github.com/rust-lang/rust-analyzer/issues/779
 				cargo = {
 					allFeatures = true,
+					features = "all",
 				},
 				check = {
 					command = "clippy",
-
-					--command = "clippy",
-					extraArgs = {"--all","--","-W", "clippy:all"},
+					extraArgs = {"--", "-D", "clippy::all"},
+				},
+				checkOnSave = {
+					command = "clippy",
+					extraArgs ={"--", "-W", "clippy::all"},
 				},
 				hoverActions = {
 					references = true,
@@ -86,5 +90,3 @@ local opts = {
 }
 
 require('rust-tools').setup(opts)
-
-
